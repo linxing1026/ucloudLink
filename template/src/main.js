@@ -1,12 +1,9 @@
-{{#if_eq build "standalone"}}
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-{{/if_eq}}
-import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import FastClick from 'fastclick'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import VueRouter from 'vue-router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import Home from './components/HelloFromVux'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
+import Vue from 'vue'
+import FastClick from 'fastclick'
+import VueRouter from 'vue-router'
+import App from './App'
+import Home from './components/HelloFromVux'
 import store from './store'
 import i18n from './lang/all'
 import 'lib-flexible'
@@ -18,8 +15,7 @@ Vue.use(LoadingPlugin)
 Vue.use(ToastPlugin)
 Vue.prototype.$ajax = getData
 
-Vue.use(VueRouter){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-
+Vue.use(VueRouter)
 getConfig.getConfig()
          .then(res=>{
            Object.assign(config,res);
@@ -27,21 +23,21 @@ getConfig.getConfig()
          })
 const routes = [{
   path: '/',
-  component: Home{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-}]{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+  component: Home
+}]
 
 const router = new VueRouter({
-  routes{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-}){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+  routes
+})
 
-FastClick.attach(document.body){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+FastClick.attach(document.body)
 
-Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   router,
   store:store,
   i18n:i18n,
-  render: h => h(App){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-}).$mount('#app-box'){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+  render: h => h(App)
+}).$mount('#app-box')
