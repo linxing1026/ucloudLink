@@ -44,6 +44,14 @@ module.exports = {
       "type": "confirm",
       "message": "Install vue-router?"
     },
+    "less":{
+      "type":"confirm",
+      "message":"Install less?"
+    },
+    "sass":{
+      "type":"confirm",
+      "message":"Install sass?"
+    },
     "lint": {
       "type": "confirm",
       "message": "Use ESLint to lint your code?"
