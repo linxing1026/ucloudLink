@@ -55,4 +55,4 @@ const i18n = new VueI18n({
     fallbackLocale: "zh"
 })
 export default i18n;
-console.log(i18n)
+
